@@ -75,13 +75,6 @@ public class mat{
         this.shape = shape;
     }
 
-    public void swap(double i, double j){
-        double tag;
-        tag =i;
-        i = j;
-        j = tag;
-    }
-
     public static void swap(double[][] arr, int a, int b) {
         double tmp = arr[a][b];
         arr[a][b] = arr[b][a];
@@ -120,7 +113,7 @@ public class mat{
     }
 }
 
-    public void transpose(){
+    public void transpose() throws Exception {
         if(shape.length == 1){
             mat2d = new double[shape[0]][0];
             for (int i = 0; i < shape[0]; i++) {
@@ -130,7 +123,7 @@ public class mat{
         if (shape.length == 2)
             for(int i =0; i < shape[0]; i++)
                 for (int j = 0; j < shape[1]; j++)
-                    swap(mat2d, i, j);
+                    swap(mat2d[i][j], mat2d[j][i]);
     }
 
     public void add(){

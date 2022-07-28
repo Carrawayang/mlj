@@ -1,7 +1,7 @@
 import matrix.mat;
 
 public class _002_mat_test {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws Exception {
         mat m0 = new mat();
         mat m1 = new mat(1);
         mat m2 = new mat(2, 2);
